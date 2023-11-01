@@ -9,15 +9,19 @@
     "lint": "next lint",
     "get-sb-json": "storyblok pull-components --space 260007",
     "gen-sb-types": "storyblok-generate-ts compilerOptions.unknownAny=true source=./components.260007.json target=./component-types-sb",
-    "sb-code-gen": "npm run get-sb-json && npm run gen-sb-types"
+    "sb-code-gen": "npm run get-sb-json && npm run gen-sb-types",
+    "codegen": "graphql-codegen"
   },
   "dependencies": {
     "@storyblok/react": "^2.4.7",
+    "graphql": "^16.8.1",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
